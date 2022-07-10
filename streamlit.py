@@ -47,7 +47,7 @@ else:
     df_selection = df.query("DEPARTAMENTO == @DEPARTAMENTO")
 
     # st.dataframe(df_selection)
-    st.title("Hello world!") 
+    st.title("🔍 Exploración de datos (graficas)") 
 
     dataframe_depatamento = (
     df_selection.loc[:,['DEPARTAMENTO','APROBACIÓN']].groupby('DEPARTAMENTO').mean('APROBACIÓN')
@@ -58,7 +58,7 @@ else:
         x = "APROBACIÓN",
         y = dataframe_depatamento.index,
         orientation = "h",
-        title= "<b> Hola </b>",
+        title= "<b> Nivel de aprobación a nivel departamental </b>",
         color_discrete_sequence = ["#0083BB"] * len(dataframe_depatamento),
         template = "plotly_white"
     )
@@ -77,6 +77,7 @@ else:
 
     fig_2 = px.line(
         dataframe_año,
+        title= "<b> Nivel de aprobación a nivel departamental </b>",
         x = dataframe_año.index,
         y = "APROBACIÓN"
     )
