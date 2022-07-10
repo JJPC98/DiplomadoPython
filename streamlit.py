@@ -59,7 +59,7 @@ else:
         y = dataframe_depatamento.index,
         orientation = "h",
         title= "<b> Nivel de aprobación a nivel departamental </b>",
-        color_discrete_sequence = ["#0083BB"] * len(dataframe_depatamento),
+        color_discrete_sequence = ["#FF4B4B"] * len(dataframe_depatamento),
         template = "plotly_white"
     )
 
@@ -80,7 +80,7 @@ else:
         x = dataframe_año.index,
         y = "APROBACIÓN",
         title= "<b> Serie de tiempo (aprobación con respecto el año) </b>",
-        color_discrete_sequence = ["#3EC6FF"] * len(dataframe_depatamento),
+        color_discrete_sequence = ["#FF4B4B"] * len(dataframe_depatamento),
         template = "plotly_white"
     )
 
