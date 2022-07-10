@@ -77,11 +77,12 @@ else:
 
     fig_2 = px.line(
         dataframe_año,
-        title= "<b> Nivel de aprobación a nivel departamental </b>",
         x = dataframe_año.index,
-        y = "APROBACIÓN"
+        y = "APROBACIÓN",
+        title= "<b> Serie de tiempo (aprobación con respecto el año) </b>",
+        color_discrete_sequence = ["#3EC6FF"] * len(dataframe_depatamento),
+        template = "plotly_white"
     )
-
 
 
     st.plotly_chart(fig)
